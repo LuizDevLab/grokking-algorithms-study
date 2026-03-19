@@ -7,5 +7,13 @@ def buscaMenor(arr):
       menor_indice = i
   return menor_indice
 
-def ordenacao_selecao(arr):
-  
+print(buscaMenor([5, 3, 6, 2, 10]))
+
+def ordenacaoSelecao(arr):
+  novo_arr = []
+  for i in range(len(arr)):
+    menor_indice = buscaMenor(arr)
+    novo_arr.append(arr.pop(menor_indice))
+  return novo_arr
+
+print(ordenacaoSelecao([5, 3, 6, 2, 10]))
